@@ -37,6 +37,10 @@ a {
     text-decoration: none;
 }
 
+img {
+    max-width: 100%;
+}
+
 .container {
     padding: 0 15px;
     margin: 0 auto;
@@ -1027,8 +1031,64 @@ header .other-links img {
 
 /* End Services  */
 /* Sart Our Skills */
-img {
-    max-width: 100%;
+
+.our-skills {
+    padding: var(--section-padding) 0;
+}
+
+.our-skills .container {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--grid-main-gap);
+}
+
+.our-skills img {
+    max-width: 50%;
+    display: none;
+}
+
+@media (min-width:991px) {
+    .our-skills img {
+        display: block;
+    }
+}
+
+.our-skills .skills-set {
+    flex: 1;
+}
+
+.our-skills .skill h3 {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.our-skills .skill div {
+    height: 30px;
+    width: 100%;
+    background-color: #ddd;
+    position: relative;
+}
+
+.our-skills .skill span {
+    display: inline-block;
+    background-color: var(--main-color);
+    height: inherit;
+}
+
+.our-skills .skill div::after {
+    content: attr(percentage);
+    position: absolute;
+    top: -125%;
+    right: 0;
+    color: var(--main-color);
+    font-weight: bold;
+    background-color: var(--alt-white);
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 0.8em;
+    display: flex;
+    padding: 2px 5px;
+    align-items: center;
 }
 
 /* End Our Skills */
@@ -1104,6 +1164,109 @@ img {
 /* End How */
 
 /* Start Events */
+.events {
+    padding: var(--section-padding) 0;
+    position: relative;
+}
+
+.events .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.events img {
+    max-width: 40%;
+    display: none;
+}
+
+@media (min-width:991px) {
+    .events img {
+        display: block;
+    }
+}
+
+.events .info {
+    flex: 1;
+}
+
+.events .info .time {
+    display: flex;
+    gap: calc(var(--grid-main-gap)/2);
+    justify-content: center;
+}
+
+.events .info .time .time-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 75px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: var(--alt-white);
+    text-align: center;
+}
+
+.events .info .time-unit span:first-child {
+    font-size: 2.2em;
+    padding: 15px;
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+.events .info .time-unit span:last-child {
+    width: 100%;
+    border-top: 1px solid #ccc;
+    padding: 5px;
+}
+
+.events .info .content {
+    text-align: center;
+}
+
+.events .info .content h3 {
+    margin-top: 40px;
+    font-size: 1.8em;
+}
+
+.events .info .content p {
+    line-height: 1.7;
+    font-size: 1.2em;
+    color: var(--pragraph-color);
+}
+
+.events .subscribe {
+    width: 100%;
+    margin-top: 50px;
+}
+
+.events .subscribe form {
+    width: 600px;
+    margin: 20px auto;
+    padding: 30px 40px;
+    background-color: #f6f5f5;
+    border-radius: 50px;
+    display: flex;
+    gap: 20px;
+}
+
+.events .subscribe input {
+    border: none;
+    padding: 20px;
+    flex: 1;
+    caret-color: var(--main-color);
+    border-radius: 40px;
+}
+
+.events .subscribe button {
+    border: none;
+    padding: 20px;
+    background-color: var(--main-color);
+    color: var(--alt-white);
+    border-radius: 40px;
+    font-weight: bold;
+}
 
 /* End Events */
 
@@ -1246,11 +1409,13 @@ img {
     background-color: var(--section-background);
     border: 1px solid #ddd;
 }
+
 @media (max-width:991px) {
-.top-videos .holder {
-    flex-direction: column;
+    .top-videos .holder {
+        flex-direction: column;
+    }
 }
-}
+
 .top-videos .holder .list {
     background-color: #f4f4f4;
 }
@@ -1289,7 +1454,46 @@ img {
     padding: 15px;
 }
 
-/* end top videos  */
+/* End top videos  */
+/* Start stats */
+.stats {
+    padding: var(--section-padding) 0;
+    position: relative;
+    background-image: url(../images/stats.jpg);
+
+}
+
+.stats::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    background-color: #fff;
+    opacity: 50%;
+}
+
+.stats .container {
+    position: relative;
+    z-index: 1;
+}
+
+.stats h2 {
+    text-align: center;
+}
+
+.stats .box {
+    background-color: hsla(0, 0%, 100%, 0.5);
+}
+
+.stats .box i {}
+
+.stats .box .number {
+    font-weight: bold;
+    opacity: 80%;
+}
+
+.stats .box .text {}
+
+/* End stats */
 
 /* start animations */
 
