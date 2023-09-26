@@ -1154,8 +1154,12 @@ header .other-links img {
     border-radius: 6px;
     background-color: var(--alt-white);
     text-align: center;
+    transition: var(--main-duration);
 }
+.events .info .time .time-unit:hover {
+    border: 1px solid var(--main-color);
 
+}
 .events .info .time-unit span:first-child {
     font-size: 2.2em;
     padding: 15px;
@@ -1209,11 +1213,15 @@ header .other-links img {
 
 .events .subscribe button {
     border: none;
+    cursor: pointer;
     padding: 20px;
     background-color: var(--main-color);
     color: var(--alt-white);
     border-radius: 40px;
     font-weight: bold;
+}
+.events .subscribe button:hover {
+    background-color: var(--main-color-alt);
 }
 @media (max-width: 767px) {
     .events .subscribe form {
@@ -1572,13 +1580,17 @@ header .other-links img {
 
 .discount .request button {
     background-color: var(--main-color);
+    cursor: pointer;
     color: var(--alt-white);
     border: none;
     padding: 15px;
     font-weight: bold;
     font-size: 1.2em;
+    transition: var(--main-duration);
 }
-
+.discount .request button:hover {
+    background-color: var(--main-color-alt);
+}
 /* End discount */
 /* Start footer */
 footer {
